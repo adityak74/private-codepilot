@@ -27,6 +27,7 @@ def set_git_branch(value):
     print(f"Setting git branch {GIT_BRANCH} to {value}")
     GIT_BRANCH = value
 
+
 def yes_man(message, history):
     print(history, GIT_BRANCH)
     answer = qachain.invoke({"query": message})
@@ -37,9 +38,7 @@ def yes_man(message, history):
 chat_interface = gr.ChatInterface(
     yes_man,
     chatbot=gr.Chatbot(height=400),
-    textbox=gr.Textbox(
-        placeholder="How can I help?", container=False, scale=7
-    ),
+    textbox=gr.Textbox(placeholder="How can I help?", container=False, scale=7),
     description=f"Active Repo: {REPO_DIR}",
     theme="base",
     cache_examples=True,
@@ -76,10 +75,7 @@ with gr.Blocks(css=css) as demo:
             elem_id="git_branch",
             key="git_branch",
         )
-        git_branch_textbox.change(
-            fn=set_git_branch,
-            inputs=git_branch_textbox
-        )
+        git_branch_textbox.change(fn=set_git_branch, inputs=git_branch_textbox)
 
     with gr.Column():
         # Add the chat interface within the column
@@ -90,11 +86,9 @@ with gr.Blocks(css=css) as demo:
     with gr.Row():
         clear_button = gr.Button("Clear Chat History")
 
-
     # Define the action for the clear button
     def clear_chat_history():
         return gr.update(value=[])
-
 
     clear_button.click(clear_chat_history, outputs=chat_interface.chatbot)
 
