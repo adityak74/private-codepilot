@@ -14,7 +14,7 @@ def set_git_branch(value):
 
 
 def yes_man(message, history, git_branch):
-    print("message------>>>", message, history, git_branch)
+    print("message and history------>>>", message, history, git_branch)
     answer = private_codepilot.get_qa_chain().invoke({"query": message})
     return answer["result"]
 
@@ -25,7 +25,7 @@ demo = gr.ChatInterface(
     textbox=gr.Textbox(
         placeholder=f"Current Repo: {active_repo}", container=False, scale=7
     ),
-    title="Zefr-Copilot",
+    title="Private-Codepilot",
     description="Ask any questions",
     theme="soft",
     examples=None,
