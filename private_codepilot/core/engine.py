@@ -1,9 +1,9 @@
 """Engine"""
 
 
-class PrivateCopilot:
-    """Private Co pilot"""
+class PrivateCodepilot:
+    """Private Code pilot"""
 
     def __init__(self):
-        """Initialize PrivateCopilot"""
+        """Initialize PrivateCodepilot"""
         pass
