@@ -15,6 +15,8 @@ langchain-community = "^0.2.1"
 gradio = "^4.32.1"
 langchain-chroma = "^0.1.1"
 black = "^24.4.2"
+python-dotenv = "^1.0.1"
+gitpython = "^3.1.43"
 
 [build-system]
 requires = ["poetry-core"]
