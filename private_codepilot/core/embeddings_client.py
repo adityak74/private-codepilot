@@ -68,7 +68,9 @@ class EmbeddingsClient:
 
     def _hash_computation_loop(self):
         """Continuously compute the hash every 10 seconds wait for 10 seconds to start"""
-        time.sleep(10)  # sleep 10 seconds and then start the thread to avoid race condition
+        time.sleep(
+            10
+        )  # sleep 10 seconds and then start the thread to avoid race condition
         while not self.stop_background_thread:
             self.update_document_hash()
             time.sleep(10)

@@ -20,7 +20,9 @@ class PrivateCodepilot:
     def get_qa_chain(self):
         """Get QA chain"""
         ollama_client = LLMClient().ollama
-        return self.embeddings_client.get_qa_chain_interface(llm_interface=ollama_client)
+        return self.embeddings_client.get_qa_chain_interface(
+            llm_interface=ollama_client
+        )
 
     def get_active_repo(self):
         """Get Active Repo"""
