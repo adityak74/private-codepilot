@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "private-copilot"
+name = "private-codepilot"
 version = "0.1.0"
 description = ""
 authors = ["Aditya Karnam <akarnam37@gmail.com>"]
 readme = "README.md"
-packages = [{include = "private_copilot"}]
+packages = [{include = "private_codepilot"}]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
