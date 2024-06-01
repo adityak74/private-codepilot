@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "private-copilot"
+version = "0.1.0"
+description = ""
+authors = ["Aditya Karnam <akarnam37@gmail.com>"]
+readme = "README.md"
+packages = [{include = "private_copilot"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+watchfiles = "^0.22.0"
+ollama = "^0.2.0"
+sentence-transformers = "^2.7.0"
+langchain-community = "^0.2.1"
+gradio = "^4.32.1"
+langchain-chroma = "^0.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
